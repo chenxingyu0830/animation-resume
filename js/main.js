@@ -69,7 +69,7 @@ body{
   background: #2f6184;
 }
 /* 给代码添加一个边框 */
-#code-body {
+#code_body {
   width: 100%;
   border: 1px solid #beccd6;
   background: #beccd6;
@@ -97,7 +97,7 @@ body{
 /* 现在开始写简历了 */
 
 /* 让代码框腾出一些的位置给我的简历框 */
-#code-body{
+#code_body{
   width: 32%;
 }
 
@@ -169,7 +169,7 @@ let code_resume = `
 #paper li{
   margin-bottom: 4px;
 }
-#code-body{
+#code_body{
   width: 23%;
 }
 
@@ -180,62 +180,84 @@ let code_resume = `
 */
 `
 
+var codeInputTimeoutID, resumeInputTimeoutID
+
+writeCode(code_ready, '').then(()=>{
+  writeResume(resume).then(()=>{
+    writeCode(code_marked, code_ready).then(()=>{
+        writeCode(code_resume, code_ready + code_marked)
+    })
+  })
+})
 
 
 /*把code写到#code和style标签里 */
-function writeCode(code, origin, fn){
-  let domCode = document.querySelector('#code-body')
-  let domPaper = document.querySelector('#paper')
-  domCode.classList.add('breathe')
-  domPaper.classList.remove('breathe')
-  domCode.innerHTML = origin || ''
+function writeCode(code, origin) {
   let n = 0
-  let id = setInterval(()=>{
-    domCode.innerHTML = Prism.highlight(origin + code.substring(0,n), Prism.languages.css, 'css');
-    styleTag.innerHTML = origin + code.substring(0,n)
-    domCode.scrollTop = domCode.scrollHeight
-    n++
-    if(n >= code.length){
-      window.clearInterval(id)
-      fn && fn.call()
+  $('#code_body').addClass('breathe')
+  $('#paper').removeClass('breathe')
+  return new Promise((resolve) => {
+    codeInputTimeoutID  = setTimeout(write, 0)
+
+    function write(){
+      n += 1
+      code_body.innerHTML = Prism.highlight(origin + code.substring(0,n), Prism.languages.css, 'css')
+      styleTag.innerHTML = origin + code.substring(0, n)
+      code_body.scrollTop = code_body.scrollHeight
+      if (n === code.length) {
+        resolve.call(undefined)
+      } else {
+        codeInputTimeoutID = setTimeout(write, 0)        
+      }
     }
-  },10)
+  })
 }
 
 
-function writeMarkdown(markdown, fn){
-  let domCode = document.querySelector('#code-body')
-  let domPaper = document.querySelector('#paper')
-  domCode.classList.remove('breathe')
-  domPaper.classList.add('breathe')
+
+function writeResume(resume){
   let n = 0
-  let id = setInterval(()=>{
-    domPaper.innerHTML = markdown.substring(0,n);
-    domPaper.scrollTop = domPaper.scrollHeight
-    n++
-    if(n >= markdown.length){
-      window.clearInterval(id)
-      fn && fn.call()
+  $('#code_body').removeClass('breathe')
+  $('#paper').addClass('breathe')
+  return new Promise((resolve)=>{
+    resumeInputTimeoutID = setTimeout(write,0)
+
+    function write() {
+      n += 1
+      paper.innerHTML = resume.substring(0,n);
+      paper.scrollTop = paper.scrollHeight
+      n++
+      if(n === resume.length){
+        paper.innerHTML = marked(resume)
+        paper.scrollTop = 0
+        return resolve(undefined)
+      }else{
+        resumeInputTimeoutID = setTimeout(write,0)
+      }
     }
-  },10)
 
-}
-
-function convertMarkdownToHtml(fn){
-  let domPaper = document.querySelector('#paper')
-  domPaper.innerHTML = marked(resume)
-  domPaper.scrollTop = 0
-  fn && fn.call()
+  })
 }
 
 
 
-writeCode(code_ready, '', ()=>{
-      writeMarkdown(resume, ()=>{
-        writeCode(code_marked, code_ready, ()=>{
-          convertMarkdownToHtml(()=>{
-            writeCode(code_resume, code_ready + code_marked)
-          })
-        } )
-      })
-})
+
+
+// function markedResume(fn){
+//   return new Promise((resolve)=>{
+//     paper.innerHTML = marked(resume)
+//     paper.scrollTop = 0
+//     resolve(undefined)
+//   })
+// }
+
+
+
+
+
+
+
+
+
+
+
