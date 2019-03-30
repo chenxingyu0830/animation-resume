@@ -62,9 +62,6 @@ Blog: https://smallyu.top/
 - GPA：3.62 / 5.00（专业前25%）
 - 相关课程：工程数学（83），软件基础（86），数据库原理及上机（82），C++程序设计及上机（87），Python程序设计与 应用（95）,JAVA程序设计及上机（94）
 
-
-
-
 `
 
 let code_ready = `/*
@@ -87,7 +84,6 @@ body{
   width: 100%;
   border: 1px solid #beccd6;
   background: #beccd6;
-  margin: 16px;
   padding: 16px;
   overflow: auto;
 }
@@ -108,13 +104,14 @@ body{
   animation: breathe 3s ease 0s infinite;
 }
 
+
+
 /* 现在开始写简历了 */
 
 /* 让代码框腾出一些的位置给我的简历框 */
-#code_body{
+#options {
   width: 32%;
 }
-
 
 #paper{
   flex: 1;
@@ -185,15 +182,15 @@ let code_better_resume = `
 /* 接着是子标题的样式 */
 
 #paper h2 {
-  font-size: 16px;
-  border-bottom: 1px solid #455A64;
   padding-bottom: 6px;
   margin-bottom: 6px;
+  border-bottom: 1px solid #455A64;
+  font-size: 16px;
 }
 #paper h3 {
   display: inline-block;
-  font-size: 14px;
   margin: 6px 0;
+  font-size: 14px;
 }
 #paper ul ul {
   margin: 4px 0;
@@ -201,12 +198,7 @@ let code_better_resume = `
 #paper li{
   margin-bottom: 4px;
 }
-
-
-
 `
-
-
 
 
 let code_photo = `
@@ -222,8 +214,8 @@ let code_photo = `
 } 
 
 /* 让代码框缩小一些，以便更好的展示简历 */
-#code_body{
-  width: 23%;
+#options{
+  width: 27%;
 }
 /*
 * 以上就是我的个人简历
@@ -246,6 +238,35 @@ writeCode(code_ready, '').then(()=>{
   })
 })
 
+var speedCode = 1, duration = 80
+$('#speed_btn').click(() => {
+  speedCode += 1
+  if (speedCode > 3) {
+    speedCode = 1
+  }
+  switch (speedCode) {
+    case 1:
+      speed_status.innerText = '🚴'
+      description.innerText = '速度可以加快一点'
+      duration = 80
+      break
+    case 2:
+      speed_status.innerText = '🚘'
+      description.innerText = '我要最快速度'
+      duration = 40
+      break
+    case 3:
+      speed_status.innerText = '🚀'
+      description.innerText = '慢一点'
+      duration = 0
+      break
+    default:
+      return 0
+  }
+})
+
+
+
 
 /*把code写到#code和style标签里 */
 function writeCode(code, origin) {
@@ -253,7 +274,7 @@ function writeCode(code, origin) {
   return new Promise((resolve) => {
     $('#code_body').addClass('breathe')
     $('#paper').removeClass('breathe')
-    codeInputTimeoutID  = setTimeout(write, 0)
+    codeInputTimeoutID  = setTimeout(write, duration)
 
     function write(){
       n += 1
@@ -263,7 +284,7 @@ function writeCode(code, origin) {
       if (n === code.length) {
         resolve.call(undefined)
       } else {
-        codeInputTimeoutID = setTimeout(write, 0)        
+        codeInputTimeoutID = setTimeout(write, duration)        
       }
     }
   })
@@ -276,7 +297,7 @@ function writeResume(resume){
   return new Promise((resolve)=>{
     $('#code_body').removeClass('breathe')
     $('#paper').addClass('breathe')
-    resumeInputTimeoutID = setTimeout(write,0)
+    resumeInputTimeoutID = setTimeout(write,duration)
 
     function write() {
       n += 1
@@ -286,7 +307,7 @@ function writeResume(resume){
         paper.scrollTop = 0
         return resolve(undefined)
       }else{
-        resumeInputTimeoutID = setTimeout(write,0)
+        resumeInputTimeoutID = setTimeout(write,duration)
       }
     }
 

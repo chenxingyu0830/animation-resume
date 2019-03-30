@@ -3,6 +3,61 @@
   margin: 0;
   padding: 0;
 }
+.wrapper{
+  min-width: 1100px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+#paper > pre{
+  padding-left: 16px;
+}
+#paper > .content{
+  overflow: auto;
+}
+img.avatar {
+  width: 0;
+}
+
+#options {
+  width: 100%;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  position: relative;
+}
+#options #code_body {
+  height: 100%;
+}
+#options #speed_btn {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  transition: all 0.2s;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  max-width: 110px;
+}
+#options #speed_status {
+  transition: all 0.2s;
+  font-size: 24px;
+  margin-left: 10px;
+}
+#options #description {
+  opacity: 0;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+#options #speed_btn:hover #speed_status {
+  transform: scale(1.2);
+}
+#options #speed_btn:hover #description {
+  opacity: 1;
+}
+
 
 .token.comment, 
 .token.punctuation, 
@@ -10,23 +65,7 @@
 .token.selector {
   color: black;
 }
-.wrapper{
-  min-width: 1100px;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-}
 
-#paper > pre{
-  padding-left: 16px;
-}
-#paper > .content{
-  overflow: auto;
-}
-
-img.avatar {
-  width: 0;
-}
 
 @keyframes breathe
 {
