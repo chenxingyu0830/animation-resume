@@ -1,13 +1,10 @@
 let resume = `# 陈星宇
-电话： 188-6808-5296 | chenxingyu0830@gmail.com | 杭州
-微信：chenxingyu0529 | GitHup: https://github.com/chenxingyu0830
-2019年毕业 | 求职意向：web前端工程师 | 期望薪资：8k
+188-6808-5296 | chenxingyu0830@gmail.com | 杭州
+GitHub: https://github.com/chenxingyu0830
+Website: https://smallyu.top/resume/
+Blog: https://smallyu.top/ 
+19届毕业生 | 前端工程师 
 
-## 关于我
-- 2015-9 - 2017.6 衢州学院 | 大专学历
-- 2017.9 - 2019.6（在读）浙江大学城市学院 | 本科学历
-- 自学前端半年，希望找一份前端岗位工作
-- 个人博客地址：https://smallyu.top/
 
 ## 专业技能
 - Html5 , CSS3 & JavaScript
@@ -18,6 +15,19 @@ let resume = `# 陈星宇
 - 了解HTTP协议，HTTP请求、响应。
 - 熟悉Node.js，熟悉Npm & Git。
 - 具有通过Google解决问题的能力，有自己的技术博客
+
+## 工作经历
+### 浙江浙大网新图灵信息科技有限公司
+2018/12 - 2019/01
+- 职位：前端实习生
+- 主要技术：\`CSS\`、\`jQuery\`、\`Bootstrap\`
+- 工作内容：负责网站内部后台框架添加修改模块
+
+### 浙江浙大网新图灵信息科技有限公司2
+2018/12 - 2019/01
+- 职位：前端实习生
+- 主要技术：\`CSS\`、\`jQuery\`、\`Bootstrap\`
+- 工作内容：负责网站内部后台框架添加修改模块
 
 ## 项目经验
 ### 个人简历网站
@@ -40,15 +50,19 @@ let resume = `# 陈星宇
 
 ## 教育经历
 ### 衢州学院
+2014/09 - 2017/06
 - 计算机应用技术 大专 电气与信息工程学院
 - GPA：3.4 / 4.0（专业前10%）
 - 荣誉/奖项：优秀团员（2015-2016）、“互联网+”大学生创新创业大赛金奖（2016）
 - 二等奖学金（2015-2016）、三等奖学金（2016-2017）、优秀毕业生（2017） 
 
 ### 浙江大学城市学院
+2017/09 - 2019/06
 - 电子信息工程 本科 信息与电气工程学院
 - GPA：3.62 / 5.00（专业前25%）
 - 相关课程：工程数学（83），软件基础（86），数据库原理及上机（82），C++程序设计及上机（87），Python程序设计与 应用（95）,JAVA程序设计及上机（94）
+
+
 
 
 `
@@ -122,17 +136,17 @@ let code_marked = `
  */
 `
 
-let code_resume = `
+let code_better_resume = `
 /* 调整我的简历，让它变得再好看一点 */
 #paper {
   white-space: unset;
   padding: 0 32px;
   font-size: 14px;
 }
-#paper p{
+#paper #information p{
   text-align: center;
 }
-#paper p{
+#paper #information p{
   line-height: 24px;
   white-space: pre-wrap;
 }
@@ -184,8 +198,9 @@ var codeInputTimeoutID, resumeInputTimeoutID
 
 writeCode(code_ready, '').then(()=>{
   writeResume(resume).then(()=>{
+    structuredResume()
     writeCode(code_marked, code_ready).then(()=>{
-        writeCode(code_resume, code_ready + code_marked)
+        writeCode(code_better_resume, code_ready + code_marked)
     })
   })
 })
@@ -194,9 +209,9 @@ writeCode(code_ready, '').then(()=>{
 /*把code写到#code和style标签里 */
 function writeCode(code, origin) {
   let n = 0
-  $('#code_body').addClass('breathe')
-  $('#paper').removeClass('breathe')
   return new Promise((resolve) => {
+    $('#code_body').addClass('breathe')
+    $('#paper').removeClass('breathe')
     codeInputTimeoutID  = setTimeout(write, 0)
 
     function write(){
@@ -217,18 +232,16 @@ function writeCode(code, origin) {
 
 function writeResume(resume){
   let n = 0
-  $('#code_body').removeClass('breathe')
-  $('#paper').addClass('breathe')
   return new Promise((resolve)=>{
+    $('#code_body').removeClass('breathe')
+    $('#paper').addClass('breathe')
     resumeInputTimeoutID = setTimeout(write,0)
 
     function write() {
       n += 1
-      paper.innerHTML = resume.substring(0,n);
+      paper.innerHTML = resume.substring(0,n)
       paper.scrollTop = paper.scrollHeight
-      n++
       if(n === resume.length){
-        paper.innerHTML = marked(resume)
         paper.scrollTop = 0
         return resolve(undefined)
       }else{
@@ -239,17 +252,21 @@ function writeResume(resume){
   })
 }
 
+function structuredResume(){
+  $('#paper')[0].innerHTML = marked(resume)
+  $('#paper').prepend('<div id="information"></div>', '<div id="skills"></div>', '<div id="jobs"></div>', '<div id="project"></div>', '<div id="education"></div>')
+  $('#information').append($('h1'), $('p').first())
+  $('#skills').append($('h2:contains("专业技能")'), $('ul').first())
+  $('#education').append($('h2:contains("教育经历")'))
+  $('<div class="school"></div>').append($('h3:contains("衢州学院")') ,$('#paper > p').eq(-2), $('#paper > ul').eq(-2)).appendTo($('#education'))
+  $('<div class="school"></div>').append($('h3:contains("浙江大学城市学院")'), $('#paper > p').last(), $('#paper > ul').last()).appendTo($('#education'))
+  $('#jobs').append($('h2:contains("工作经历")'))
+  $('h3:contains("公司")').each((index,element) => {
+    $('<div class="experience"></div>').append($(element), $('#paper > p').first(), $('#paper > ul').first()).appendTo($('#jobs'))
+  })
+  $('#project').append($('h2:contains("项目经历")'), $('#paper').children().not($('div')))
+}
 
-
-
-
-// function markedResume(fn){
-//   return new Promise((resolve)=>{
-//     paper.innerHTML = marked(resume)
-//     paper.scrollTop = 0
-//     resolve(undefined)
-//   })
-// }
 
 
 
