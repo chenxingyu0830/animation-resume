@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-
 .token.comment, 
 .token.punctuation, 
 .token.property, 
@@ -23,6 +22,10 @@
 }
 #paper > .content{
   overflow: auto;
+}
+
+img.avatar {
+  width: 0;
 }
 
 @keyframes breathe

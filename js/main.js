@@ -143,29 +143,47 @@ let code_better_resume = `
   padding: 0 32px;
   font-size: 14px;
 }
+#paper ol,ul {
+  padding-left: 20px;
+}
+#paper a {
+  color: #455A64;
+}
+
+/* 让每个模块上下间隔明显一点 */
+#paper > div {
+  margin: 28px 0;
+}
+
+/* 接下来是更加精细的调整 */
+
+/* 首先是个人信息模块 */
+#paper #information h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
 #paper #information p{
   text-align: center;
 }
 #paper #information p{
   line-height: 24px;
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
-#paper a {
-  color: #455A64;
+
+/* 调整一下"工作经历"和"教育经历"中时间线的位置 */
+#jobs .experience, #education .school{
+  position: relative;
 }
-#paper ol,ul {
-  padding-left: 20px;
+#jobs .experience > p, #education .school > p{
+  top: 9px;
+  right: 0;
+  position: absolute;
 }
-/* 让每个模块上下间隔明显一点 */
-#paper > div {
-  margin: 28px 0;
-}
-#paper h1 {
-  margin-top: 24px;
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 10px;
-}
+
+/* 接着是子标题的样式 */
+
 #paper h2 {
   font-size: 16px;
   border-bottom: 1px solid #455A64;
@@ -183,14 +201,34 @@ let code_better_resume = `
 #paper li{
   margin-bottom: 4px;
 }
+
+
+
+`
+
+
+
+
+let code_photo = `
+/* 然后添加一下个人头像 */
+#information{
+  position: relative;
+}
+#information .avatar{
+  position: absolute;
+  right: 0px;
+  top: -10px;
+  width: 100px;
+} 
+
+/* 让代码框缩小一些，以便更好的展示简历 */
 #code_body{
   width: 23%;
 }
-
 /*
 * 以上就是我的个人简历
 * 希望你能喜欢
-* 未完待续 2019/3/11
+* 未完待续 2019/3/30
 */
 `
 
@@ -200,7 +238,10 @@ writeCode(code_ready, '').then(()=>{
   writeResume(resume).then(()=>{
     structuredResume()
     writeCode(code_marked, code_ready).then(()=>{
-        writeCode(code_better_resume, code_ready + code_marked)
+        writeCode(code_better_resume, code_ready + code_marked).then(()=>{
+          addAvatar()
+
+        })
     })
   })
 })
@@ -251,6 +292,18 @@ function writeResume(resume){
 
   })
 }
+
+function addAvatar(){
+  return new Promise((resolve)=>{
+    $('#paper > #information').append($('img.avatar'))
+    writeCode(code_photo, code_ready + code_marked + code_better_resume)
+    $('#code_body').removeClass('breathe')
+    $('#paper').addClass('breathe')
+  })
+}
+
+
+
 
 function structuredResume(){
   $('#paper')[0].innerHTML = marked(resume)
