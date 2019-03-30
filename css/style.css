@@ -58,6 +58,36 @@ img.avatar {
   opacity: 1;
 }
 
+a.downloadResume{
+  font-size: 20px;
+  text-align: center;
+  color: #beccd6;
+  display: none;
+  line-height: 16px;
+  padding: 21px 80px 21px 85px;
+  margin-top: 15px;
+  border: 1px solid rgb(203, 205, 207);
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  opacity: 0;
+  transition: all 0.5s, 20ms;
+
+}
+.downloadResume:hover {
+  box-shadow: 4px 4px 10px 0px #beccd6;
+  transition: all 0.3s;
+}
+
+code{
+  background: #455a6426;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+  font-size: 12px;
+  margin-right: 5px;
+  color: #363636;
+}
 
 .token.comment, 
 .token.punctuation, 
