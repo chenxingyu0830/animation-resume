@@ -30,6 +30,8 @@ img.avatar {
 #options #code_body {
   height: 100%;
 }
+
+/* speed_btn */
 #options #speed_btn {
   position: absolute;
   right: 25px;
@@ -57,6 +59,32 @@ img.avatar {
 #options #speed_btn:hover #description {
   opacity: 1;
 }
+
+/* skip_btn */
+#options #skip_btn {
+  position: absolute;
+  right: 25px;
+  top: 65px;
+  transition: all 0.2s;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+#options #skip_btn #description {
+  display: none;
+}
+#options #skip_btn > #skip{
+  width: 40px;
+  display: none;
+}
+#options #skip_btn:hover #skip {
+  transform: scale(1.2);
+}
+#options #skip_btn:hover #description {
+  opacity: 1;
+}
+
 
 a.downloadResume{
   font-size: 20px;

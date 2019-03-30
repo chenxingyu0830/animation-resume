@@ -122,6 +122,9 @@ body{
 
 }
 
+
+
+
 /* 接下来，请看右边 */ 
 `
 
@@ -131,13 +134,21 @@ let code_marked = `
  * 来使我的简历变成一篇 Markdown
  * (https://github.com/markedjs/marked)
  */
+
+/* 可以点击按钮跳过动画喔 */
+#options #skip_btn > #skip{
+  display: block;
+}
+#options #skip_btn #description {
+  display: inline;
+}
 `
 
 let code_better_resume = `
 /* 调整我的简历，让它变得再好看一点 */
 #paper {
   white-space: unset;
-  padding: 0 32px;
+  padding: 0 45px;
   font-size: 14px;
 }
 #paper ol,ul {
@@ -162,11 +173,11 @@ let code_better_resume = `
   padding-bottom: 10px;
 }
 #paper #information p{
-  text-align: center;
-}
-#paper #information p{
   line-height: 24px;
   white-space: pre-line;
+}
+#paper #information p{
+  text-align: center;
 }
 
 /* 调整一下"工作经历"和"教育经历"中时间线的位置 */
@@ -234,6 +245,7 @@ var codeInputTimeoutID, resumeInputTimeoutID
 writeCode(code_ready, '').then(()=>{
   writeResume(resume).then(()=>{
     structuredResume()
+    $('#skip_btn').click(()=>{ showFinalResult() })
     writeCode(code_marked, code_ready).then(()=>{
         writeCode(code_better_resume, code_ready + code_marked).then(()=>{
           addAvatar()
@@ -242,6 +254,7 @@ writeCode(code_ready, '').then(()=>{
     })
   })
 })
+
 
 var speedCode = 1, duration = 80
 $('#speed_btn').click(() => {
@@ -284,7 +297,7 @@ function writeCode(code, origin) {
     function write(){
       n += 1
       code_body.innerHTML = Prism.highlight(origin + code.substring(0,n), Prism.languages.css, 'css')
-      styleTag.innerHTML = origin + code.substring(0, n)
+      code_style.innerHTML = origin + code.substring(0, n)
       code_body.scrollTop = code_body.scrollHeight
       if (n === code.length) {
         resolve.call(undefined)
@@ -347,7 +360,19 @@ function structuredResume(){
 }
 
 
-
+function showFinalResult() {
+  $('#paper').addClass('breathe')
+  $('#code_body').removeClass('breathe')
+  $('#information').append($('img.avatar'))
+  code_body.innerHTML = Prism.highlight(code_ready + code_marked + code_better_resume + code_photo, Prism.languages.css, 'css')
+  code_style.innerHTML = code_ready + code_marked + code_better_resume + code_photo
+  code_body.scrollTop = code_body.scrollHeight
+  window.clearTimeout(codeInputTimeoutID)
+  $('#options').css({ 'width': '23%' })
+  $('#options').append($('a.downloadResume'))
+  $('#speed_btn').hide()
+  $('#skip_btn').hide()
+}
 
 
 
