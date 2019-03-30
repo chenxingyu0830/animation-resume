@@ -11,10 +11,16 @@ Blog: https://smallyu.top/
   - 能够使用原生JavaScript独立制作精美页面
   - 掌握HTML5语义化如  header、nav、main、article等结构标签
   - 掌握CSS3动画、过渡、弹性盒子布局flex方法、媒体查询等响应式常用技术
-- 了解jQuery常用API，利用jQuery实现原生JS的操作内容，进行页面的交互设计、效果实现等。
-- 了解HTTP协议，HTTP请求、响应。
-- 熟悉Node.js，熟悉Npm & Git。
-- 具有通过Google解决问题的能力，有自己的技术博客
+- Vue
+  - 有 Vue 个人开发项目经验，阅读过官方文档，掌握组件及组件间数据传递的使用、响应式原理、路由和 Vuex 的使用等
+- jQuery
+  - 了解jQuery常用API，利用jQuery实现原生JS的操作内容，进行页面的交互设计、效果实现等。
+- Webpack
+  - 掌握使用 Webpack 打包项目的经验，了解其管理资源的方法，如 css-loader 、 babel-loader 等
+- 其他
+  - 了解HTTP协议，了解常见的 Web 性能优化方案。
+  - 了解Node.js，熟悉Npm & Git。掌握与后端API接口的交流方法。
+  - 具有通过Google解决问题的能力，有自己的技术博客
 
 ## 工作经历
 ### 浙江浙大网新图灵信息科技有限公司
@@ -23,30 +29,37 @@ Blog: https://smallyu.top/
 - 主要技术：\`CSS\`、\`jQuery\`、\`Bootstrap\`
 - 工作内容：负责网站内部后台框架添加修改模块
 
-### 浙江浙大网新图灵信息科技有限公司2
-2018/12 - 2019/01
-- 职位：前端实习生
-- 主要技术：\`CSS\`、\`jQuery\`、\`Bootstrap\`
-- 工作内容：负责网站内部后台框架添加修改模块
 
 ## 项目经验
-### 个人简历网站
-- 关键词： HTML5、CSS3、JavaScript
-- 源码链接：https://github.com/chenxingyu0830/resume
-- 预览链接：https://smallyu.top/resume/index.html
-- 描述：这是个人的简历网站，包含自我介绍和各种利用原生JavaScript实现loading界面，导航栏动画效果，滚动到指定位置， 高亮元素等实现的特效。
+### “Let's share”多人共享博客平台
+- 关键词： \`Less\`、\`ES6\`、\`Vue.js\`、\`Vue-cli\`、\`Vue Router\`、\`Vuex\`、\`Axios\`、\`Npm\`、\`Webpack@3\`
+- 源码链接：https://github.com/chenxingyu0830/vue-blog-client
+- 预览链接：https://smallyu.top/vue-blog-client/dist/.
+- 描述：这个项目由个人独立开发，是基于Vue全家桶实现的多人共享博客平台。功能有用户登录/注册，博客的创建/编辑/删除等功能。通过Vue Router实现路由的跳转、异步加载、权限验证等，通过vuex实现状态管理，用Axios获取数据，并对接口进行了封装。
 
-### 123导航网站
-- 关键词： hash、JavaScript
-- 源码链接：https://github.com/chenxingyu0830/myBookmarks
-- 预览链接：https://smallyu.top/myBookmarks/
-- 描述：可以通过设置网站快捷键，键盘按键跳转到记录的网站。
+### 在线简历生成器
+- 关键词： \`jQuery\`、\`CSS3动画\`、\`Flex布局\`、\`变速\`、\`跳过动画\`、\`Promise\`
+- 源码链接：https://github.com/chenxingyu0830/animation-resume
+- 预览链接：https://smallyu.top/animation-resume/
+- 描述：这个项目动态的展示了一个 Markdown 简历的制作过程，通过Flex布局实现页面布局，jQuery实现简历模块化。另外还添加了 变速/跳过动画 功能。
+
+### “I want to try”个人网站
+- 关键词： \`CSS3\`、\`JavaScript\`、\`MVC思想\`、\`模块化\`、\`留言功能\`
+- 源码链接：https://github.com/chenxingyu0830/resume
+- 预览链接：https://smallyu.top/resume/
+- 描述：这是个人的简历网站，包含自我介绍和各种利用原生JavaScript实现loading界面，导航栏动画效果，滚动到指定位置，高亮元素等实现的特效。并且实现留言功能
+
+### 给你一只皮卡丘
+- 关键词： \`纯CSS实现卡通形象\`、\`Promise\`、\`变速\`、\`Markdown\`、\`响应式布局\`、\`适配移动端\`
+- 源码链接：https://github.com/chenxingyu0830/make-a-pikachu
+- 预览链接：https://smallyu.top/make-a-pikachu/
+- 描述：这个项目是通过原生JS实现的，以动画的效果展示如果从无到有通过CSS实现皮卡丘的卡通形象。另外还添加了变速/结束动画功能。
 
 ### 色彩涂鸦
-- 关键词： html5、Canvas、ES6、JavaScript
+- 关键词： \`html5\`、\`Canvas\`、\`ES6\`、\`JavaScript\`
 - 源码链接：https://github.com/chenxingyu0830/canvas-dome
 - 预览链接：https://smallyu.top/canvas-dome/
-- 描述：使用HTML5的Canvas元素及其API，实现支持多指画图（可选色/粗细）、橡皮擦、一键清空、保存至本地功能。
+- 描述：使用HTML5的Canvas元素及其API，其中功能有可选色/粗细、橡皮擦、一键清空、保存至本地等。
 
 ## 教育经历
 ### 衢州学院
@@ -59,7 +72,7 @@ Blog: https://smallyu.top/
 ### 浙江大学城市学院
 2017/09 - 2019/06
 - 电子信息工程 本科 信息与电气工程学院
-- GPA：3.62 / 5.00（专业前25%）
+- GPA：3.91 / 5.00（专业前15%）
 - 相关课程：工程数学(83)， 软件基础(86)， 数据库原理及上机(82)， C++程序设计及上机(87)， Python程序设计与应用(95)， JAVA程序设计及上机(94)
 
 `
@@ -112,7 +125,6 @@ body{
 #options {
   width: 32%;
 }
-
 #paper{
   flex: 1;
   background: #fdfdfd;
@@ -122,26 +134,24 @@ body{
 
 }
 
-
-
-
 /* 接下来，请看右边 */ 
 `
 
 let code_marked = `
+/* 可以点击按钮跳过动画喔 */
+#options #skip_btn > #skip{
+  display: block;
+}
+#options #skip_btn #skip_description {
+  display: inline;
+}
+
 /* 
  * 接下来我要使用一个优秀的库 marked.js
  * 来使我的简历变成一篇 Markdown
  * (https://github.com/markedjs/marked)
  */
 
-/* 可以点击按钮跳过动画喔 */
-#options #skip_btn > #skip{
-  display: block;
-}
-#options #skip_btn #description {
-  display: inline;
-}
 `
 
 let code_better_resume = `
@@ -245,11 +255,13 @@ var codeInputTimeoutID, resumeInputTimeoutID
 writeCode(code_ready, '').then(()=>{
   writeResume(resume).then(()=>{
     structuredResume()
-    $('#skip_btn').click(()=>{ showFinalResult() })
+    $('#skip_btn').click(()=>{
+      showFinalResult()
+    })
     writeCode(code_marked, code_ready).then(()=>{
         writeCode(code_better_resume, code_ready + code_marked).then(()=>{
           addAvatar()
-
+          showFinalResult()
         })
     })
   })
@@ -265,17 +277,17 @@ $('#speed_btn').click(() => {
   switch (speedCode) {
     case 1:
       speed_status.innerText = '🚴'
-      description.innerText = '速度可以加快一点'
+      speed_description.innerText = '速度可以加快一点'
       duration = 80
       break
     case 2:
       speed_status.innerText = '🚘'
-      description.innerText = '我要最快速度'
+      speed_description.innerText = '我要最快速度'
       duration = 40
       break
     case 3:
       speed_status.innerText = '🚀'
-      description.innerText = '慢一点'
+      speed_description.innerText = '慢一点'
       duration = 0
       break
     default:
@@ -336,8 +348,6 @@ function addAvatar(){
   return new Promise((resolve)=>{
     $('#paper > #information').append($('img.avatar'))
     writeCode(code_photo, code_ready + code_marked + code_better_resume)
-    $('#code_body').removeClass('breathe')
-    $('#paper').addClass('breathe')
   })
 }
 

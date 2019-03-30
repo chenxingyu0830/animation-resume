@@ -48,7 +48,7 @@ img.avatar {
   font-size: 24px;
   margin-left: 10px;
 }
-#options #description {
+#options #speed_description {
   opacity: 0;
   font-size: 14px;
   transition: all 0.3s;
@@ -56,7 +56,7 @@ img.avatar {
 #options #speed_btn:hover #speed_status {
   transform: scale(1.2);
 }
-#options #speed_btn:hover #description {
+#options #speed_btn:hover #speed_description {
   opacity: 1;
 }
 
@@ -71,7 +71,7 @@ img.avatar {
   display: flex;
   align-items: center;
 }
-#options #skip_btn #description {
+#options #skip_btn #skip_description {
   display: none;
 }
 #options #skip_btn > #skip{
@@ -81,7 +81,7 @@ img.avatar {
 #options #skip_btn:hover #skip {
   transform: scale(1.2);
 }
-#options #skip_btn:hover #description {
+#options #skip_btn:hover #skip_description {
   opacity: 1;
 }
 
