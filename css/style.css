@@ -73,6 +73,9 @@ img.avatar {
 }
 #options #skip_btn #skip_description {
   display: none;
+  font-size: 14px;
+  transition: all 0.3s;
+  opacity: 0;
 }
 #options #skip_btn > #skip{
   width: 40px;
@@ -98,7 +101,6 @@ a.downloadResume{
   font-weight: bold;
   border-radius: 10px;
   text-decoration: none;
-  opacity: 0;
   transition: all 0.5s, 20ms;
 
 }

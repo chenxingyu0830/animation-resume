@@ -14,12 +14,12 @@ Blog: https://smallyu.top/
 - Vue
   - 有 Vue 个人开发项目经验，阅读过官方文档，掌握组件及组件间数据传递的使用、响应式原理、路由和 Vuex 的使用等
 - jQuery
-  - 了解jQuery常用API，利用jQuery实现原生JS的操作内容，进行页面的交互设计、效果实现等。
+  - 了解jQuery常用API，利用jQuery实现原生JS的操作内容，进行页面的交互设计、效果实现等
 - Webpack
   - 掌握使用 Webpack 打包项目的经验，了解其管理资源的方法，如 css-loader 、 babel-loader 等
 - 其他
-  - 了解HTTP协议，了解常见的 Web 性能优化方案。
-  - 了解Node.js，熟悉Npm & Git。掌握与后端API接口的交流方法。
+  - 了解HTTP协议，了解常见的 Web 性能优化方案
+  - 了解Node.js，熟悉Npm & Git。掌握与后端API接口的交流方法
   - 具有通过Google解决问题的能力，有自己的技术博客
 
 ## 工作经历
@@ -27,8 +27,7 @@ Blog: https://smallyu.top/
 2018/12 - 2019/01
 - 职位：前端实习生
 - 主要技术：\`CSS\`、\`jQuery\`、\`Bootstrap\`
-- 工作内容：负责网站内部后台框架添加修改模块
-
+- 工作内容：负责网站内部后台框架添加修改模块.
 
 ## 项目经验
 ### “Let's share”多人共享博客平台
@@ -47,7 +46,7 @@ Blog: https://smallyu.top/
 - 关键词： \`CSS3\`、\`JavaScript\`、\`MVC思想\`、\`模块化\`、\`留言功能\`
 - 源码链接：https://github.com/chenxingyu0830/resume
 - 预览链接：https://smallyu.top/resume/
-- 描述：这是个人的简历网站，包含自我介绍和各种利用原生JavaScript实现loading界面，导航栏动画效果，滚动到指定位置，高亮元素等实现的特效。并且实现留言功能
+- 描述：这是个人的简历网站，包含自我介绍和各种利用原生JavaScript实现loading界面，导航栏动画效果，滚动到指定位置，高亮元素等实现的特效。并且实现留言功能.
 
 ### 给你一只皮卡丘
 - 关键词： \`纯CSS实现卡通形象\`、\`Promise\`、\`变速\`、\`Markdown\`、\`响应式布局\`、\`适配移动端\`
@@ -134,17 +133,13 @@ body{
 
 }
 
+
+
 /* 接下来，请看右边 */ 
 `
 
 let code_marked = `
-/* 可以点击按钮跳过动画喔 */
-#options #skip_btn > #skip{
-  display: block;
-}
-#options #skip_btn #skip_description {
-  display: inline;
-}
+
 
 /* 
  * 接下来我要使用一个优秀的库 marked.js
@@ -251,22 +246,20 @@ a.downloadResume{
 `
 
 var codeInputTimeoutID, resumeInputTimeoutID
-
 writeCode(code_ready, '').then(()=>{
+  $('#skip_btn').children().show()
+  $('#skip_btn').click(()=>{ showFinalResult() })
   writeResume(resume).then(()=>{
     structuredResume()
-    $('#skip_btn').click(()=>{
-      showFinalResult()
-    })
     writeCode(code_marked, code_ready).then(()=>{
         writeCode(code_better_resume, code_ready + code_marked).then(()=>{
           addAvatar()
-          showFinalResult()
+          $('#speed_btn').hide()
+          $('#skip_btn').hide()
         })
     })
   })
 })
-
 
 var speedCode = 1, duration = 80
 $('#speed_btn').click(() => {
@@ -297,8 +290,6 @@ $('#speed_btn').click(() => {
 
 
 
-
-/*把code写到#code和style标签里 */
 function writeCode(code, origin) {
   let n = 0
   return new Promise((resolve) => {
@@ -319,7 +310,6 @@ function writeCode(code, origin) {
     }
   })
 }
-
 
 
 function writeResume(resume){
@@ -344,14 +334,13 @@ function writeResume(resume){
   })
 }
 
+
 function addAvatar(){
   return new Promise((resolve)=>{
     $('#paper > #information').append($('img.avatar'))
     writeCode(code_photo, code_ready + code_marked + code_better_resume)
   })
 }
-
-
 
 
 function structuredResume(){
@@ -373,13 +362,15 @@ function structuredResume(){
 function showFinalResult() {
   $('#paper').addClass('breathe')
   $('#code_body').removeClass('breathe')
-  $('#information').append($('img.avatar'))
+  window.clearTimeout(codeInputTimeoutID)
+  window.clearTimeout(resumeInputTimeoutID)
+  paper.innerHTML = resume
+  paper.scrollTop = 0
+  structuredResume()
+  $('#paper > #information').append($('img.avatar'))
   code_body.innerHTML = Prism.highlight(code_ready + code_marked + code_better_resume + code_photo, Prism.languages.css, 'css')
   code_style.innerHTML = code_ready + code_marked + code_better_resume + code_photo
   code_body.scrollTop = code_body.scrollHeight
-  window.clearTimeout(codeInputTimeoutID)
-  $('#options').css({ 'width': '23%' })
-  $('#options').append($('a.downloadResume'))
   $('#speed_btn').hide()
   $('#skip_btn').hide()
 }
