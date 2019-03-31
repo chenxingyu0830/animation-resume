@@ -212,7 +212,7 @@ let code_better_resume = `
   border-bottom: 1px solid #455A64;
   font-size: 16px;
 }
-#paper h3 {
+#paper #project h3 {
   display: inline-block;
   margin: 10px 0;
   font-size: 14px;
