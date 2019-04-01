@@ -37,35 +37,35 @@ Blog: https://smallyu.top/
 - 关键词： \`Less\`、\`ES6\`、\`Vue.js\`、\`Vue-cli\`、\`Vue Router\`、\`Vuex\`、\`Axios\`、\`Npm\`、\`Webpack@3\`
 - 源码链接：https://github.com/chenxingyu0830/vue-blog-client
 - 预览链接：https://smallyu.top/vue-blog-client/dist/.
-- 描述：这个项目由个人独立开发，是基于Vue全家桶实现的多人共享博客平台。功能有用户登录/注册，博客的创建/编辑/删除等功能。通过Vue Router实现路由的跳转、异步加载、权限验证等，通过vuex实现状态管理，用Axios获取数据，并对接口进行了封装。
+- 描述：这个项目由个人独立开发，是基于Vue全家桶实现的多人共享博客平台。功能有用户登录/注册，博客的创建/编辑/删除等功能。\`通过Vue Router实现路由的跳转、异步加载、权限验证等，通过vuex实现状态管理，用Axios获取数据\`，并对接口进行了封装。
 
 ### 在线简历生成器
 ![在线简历生成器](./images/resume-project.jpg)
 - 关键词： \`jQuery\`、\`CSS3\`、\`Flex布局\`、\`变速\`、\`跳过动画\`、\`Promise\`
 - 源码链接：https://github.com/chenxingyu0830/animation-resume
 - 预览链接：https://smallyu.top/animation-resume/
-- 描述：这个项目动态的展示了一个 Markdown 简历的制作过程，通过Flex布局实现页面布局，jQuery实现简历模块化。另外还添加了 变速/跳过动画 功能。
+- 描述：这个项目动态的展示了一个 Markdown 简历的制作过程，通过Flex布局实现页面布局，jQuery实现简历模块化。另外还添加了 \`变速/跳过动画\` 功能。
 
 ### “I want to try”个人网站
 ![“I want to try”个人网站](./images/website-project.jpg)
 - 关键词： \`CSS3\`、\`JavaScript\`、\`MVC思想\`、\`模块化\`、\`留言功能\`
 - 源码链接：https://github.com/chenxingyu0830/resume
 - 预览链接：https://smallyu.top/resume/
-- 描述：这是个人的简历网站，包含自我介绍和各种利用原生JavaScript实现loading界面，导航栏动画效果，滚动到指定位置，高亮元素等实现的特效。并且实现留言功能.
+- 描述：这是个人的简历网站，包含自我介绍和各种利用原生JavaScript实现\`loading界面，导航栏动画效果，滚动到指定位置，高亮元素等实现的特效\`。并且实现\`留言功能\`.
 
 ### 给你一只皮卡丘
 ![给你一只皮卡丘](./images/pikachu-project.jpg)
 - 关键词： \`纯CSS实现卡通形象\`、\`Promise\`、\`变速\`、\`Markdown\`、\`响应式布局\`、\`适配移动端\`
 - 源码链接：https://github.com/chenxingyu0830/make-a-pikachu
 - 预览链接：https://smallyu.top/make-a-pikachu/
-- 描述：这个项目是通过原生JS实现的，以动画的效果展示如果从无到有通过CSS实现皮卡丘的卡通形象。另外还添加了变速/结束动画功能。
+- 描述：这个项目是通过\`原生JS\`实现的，以动画的效果展示如果从无到有通过\`CSS实现\`皮卡丘的卡通形象。另外还添加了变速/结束动画功能。
 
 ### 色彩涂鸦
 ![色彩涂鸦](./images/canvas-project.jpg)
 - 关键词： \`HTML 5\`、\`Canvas\`、\`ES6\`、\`JavaScript\`
 - 源码链接：https://github.com/chenxingyu0830/canvas-dome
 - 预览链接：https://smallyu.top/canvas-dome/
-- 描述：使用 HTML 5 的 Canvas 元素及其API，其中功能有 可选色/粗细、橡皮擦、一键清空、保存至本地等。
+- 描述：使用 HTML 5 的 Canvas 元素及其API，其中功能有 \`可选色/粗细、橡皮擦、一键清空、保存至本地\`等。
 
 ## 教育经历
 ### 衢州学院
@@ -214,13 +214,9 @@ let code_better_resume = `
 }
 #paper #project h3 {
   display: inline-block;
-  margin: 10px 0;
   font-size: 14px;
 }
-#paper #project img{
-  width: 240px;
-  height: 180px;
-}
+
 #project li, .experience li{
   line-height: 1.5;
 }
@@ -231,6 +227,24 @@ let code_better_resume = `
 #paper li{
   margin-bottom: 4px;
 }
+#project .demo{
+  position: relative;
+  margin: 10px 0 55px 0;
+}
+#project .demo ul{
+  width: 65%;
+}
+#project .demo li:nth-child(1){
+  line-height: 2;
+}
+#project .demo img{
+  width: 240px;
+  height: 180px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
 `
 
 
@@ -372,6 +386,9 @@ function structuredResume(){
     $('<div class="experience"></div>').append($(element), $('#paper > p').first(), $('#paper > ul').first()).appendTo($('#jobs'))
   })
   $('#project').append($('h2:contains("项目经历")'), $('#paper').children().not($('div')))
+  $('#project h3').each((index,element) => {
+    $('<div class="demo"></div>').append($(element), $('#project > p').first(), $('#project > ul').first()).appendTo($('#project'))
+  })
 }
 
 
