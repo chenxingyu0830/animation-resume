@@ -1,18 +1,18 @@
 let resume = `# 陈星宇
 188-6808-5296 | chenxingyu0830@gmail.com | 杭州
 GitHub: https://github.com/chenxingyu0830
-Website: https://smallyu.top/resume/
-Blog: https://smallyu.top/ 
+毕业院校: 浙江大学城市学院 | 学历：本科
+个人博客: https://smallyu.top/ 
 19届毕业生 | 前端工程师 
 
 
 ## 专业技能
 - Vue
-  - 有 Vue 个人开发项目经验，阅读过官方文档，熟悉 Vue 常用功能，如组件、Vue-Router、双向绑定等。了解并使用过Vue CLI , Vuex。
-- jQuery
-  - 了解jQuery常用API，利用jQuery实现原生JS的操作内容，进行页面的交互设计、效果实现等。
+  - 有 Vue 个人开发项目经验，阅读过官方文档，熟悉 Vue 常用功能，如Vue的各个生命周期、组件之间如何通信、双向绑定等。了解并使用过 Vue-Cli , Vue-Router , Vuex。
 - Webpack
   - 掌握使用 Webpack 打包项目的经验，了解其管理资源的方法，如 css-loader 、 babel-loader 等。
+- jQuery
+  - 了解jQuery常用API，利用jQuery实现原生JS的操作内容，进行页面的交互设计、效果实现等。
 - HTML5 , CSS3 & JavaScript
   - 能狗独立制作精美网页，掌握 CSS3 动画、过渡效果、响应式等常用技术。
 - 移动端页面
@@ -20,8 +20,8 @@ Blog: https://smallyu.top/
 - 前端框架
   - 理解 MVC、MVVM 等思想，可以熟练使用Vue。
 - 其他
+  - 了解Node.js（使用过基于Node.js的框架Express），能简单实现路由功能。
   - 了解HTTP协议，了解常见的 Web 性能优化方案。
-  - 了解Node.js，熟悉Npm & Git。掌握与后端API接口的交流方法。
   - 具有通过Google解决问题的能力，有自己的技术博客。
 
 ## 工作经历
@@ -34,24 +34,24 @@ Blog: https://smallyu.top/
 ## 项目经验
 ### “Let's share”多人共享博客平台
 ![“Let's share”多人共享博客平台](./images/blog-project.jpg)
-- 关键词： \`Less\`、\`ES6\`、\`Vue.js\`、\`Vue-cli\`、\`Vue Router\`、\`Vuex\`、\`Axios\`、\`Npm\`、\`Webpack@3\`
+- 关键词： \`Vue.js\`、\`Vue-cli\`、\`Vue Router\`、\`Vuex\`、\`Scss\`、\`ES6\`、\`Axios\`、\`Webpack\`
 - 源码链接：https://github.com/chenxingyu0830/vue-blog-client
 - 预览链接：https://smallyu.top/vue-blog-client/dist/.
-- 描述：这个项目由个人独立开发，是基于Vue全家桶实现的多人共享博客平台。功能有用户登录/注册，博客的创建/编辑/删除等功能。\`通过Vue Router实现路由的跳转、异步加载、权限验证等，通过vuex实现状态管理，用Axios获取数据\`，并对接口进行了封装。
+- 描述：这个项目是基于Vue全家桶实现的多人共享博客平台。功能有用户登录/注册，博客的创建/编辑/删除等功能。\`通过Vue Router实现路由的跳转、异步加载、权限验证等，通过vuex实现状态管理，用Axios获取数据\`，并对接口进行了封装。
 
-### 在线简历生成器
-![在线简历生成器](./images/resume-project.jpg)
-- 关键词： \`jQuery\`、\`CSS3\`、\`Flex布局\`、\`变速\`、\`跳过动画\`、\`Promise\`
-- 源码链接：https://github.com/chenxingyu0830/animation-resume
-- 预览链接：https://smallyu.top/animation-resume/
-- 描述：这个项目动态的展示了一个 Markdown 简历的制作过程，通过Flex布局实现页面布局，jQuery实现简历模块化。另外还添加了 \`变速/跳过动画\` 功能。
+### 仿“CNode社区”网站
+![仿“CNode社区”网站](./images/cnode-project.jpg)
+- 关键词： \`Vue.js\`、\`Vue-cli\`、\`Vue Router\`、\`Scss\`、\`ES6\`、\`Axios\`、\`Webpack\`
+- 源码链接: https://github.com/chenxingyu0830/cnode
+- 预览链接: https://smallyu.top/cnode/dist/
+- 描述: 这个项目是基于Vue-cli脚手架工具，仿照CNode社区实现的。CNode社区官网提供了后端数据的接口。功能包括查看\`首页的博客，点击查看博客详情，用户信息，实现简单的分页组件\`。
 
-### “I want to try”个人网站
-![“I want to try”个人网站](./images/website-project.jpg)
-- 关键词： \`CSS3\`、\`JavaScript\`、\`MVC思想\`、\`模块化\`、\`留言功能\`
-- 源码链接：https://github.com/chenxingyu0830/resume
-- 预览链接：https://smallyu.top/resume/
-- 描述：这是个人的简历网站，包含自我介绍和各种利用原生JavaScript实现\`loading界面，导航栏动画效果，滚动到指定位置，高亮元素等实现的特效\`。并且实现\`留言功能\`.
+### 仿华为音乐项目
+![仿华为音乐项目](./images/music-project.jpg)
+- 关键词： \`原生JS\`、\`CSS3\`、\`Scss\`、\`ES6\`、\`手势库\`
+- 源码链接：https://github.com/chenxingyu0830/huawei-music
+- 预览链接: https://smallyu.top/huawei-music/dist/
+- 描述：这个项目是仿照华为音乐制作的项目，包括\`暂停播放、上一曲、下一曲、滑屏显示歌词\`等功能。其中滑屏显示歌曲是通过封装的手势库里的函数实现的。
 
 ### 给你一只皮卡丘
 ![给你一只皮卡丘](./images/pikachu-project.jpg)
@@ -67,19 +67,7 @@ Blog: https://smallyu.top/
 - 预览链接：https://smallyu.top/canvas-dome/
 - 描述：使用 HTML 5 的 Canvas 元素及其API，其中功能有 \`可选色/粗细、橡皮擦、一键清空、保存至本地\`等。
 
-## 教育经历
-### 衢州学院
-2014/09 - 2017/06
-- 计算机应用技术 大专 电气与信息工程学院
-- GPA：3.4 / 4.0（专业前10%）
-- 荣誉/奖项：优秀团员（2015-2016）、“互联网+”大学生创新创业大赛金奖（2016）
-- 二等奖学金（2015-2016）、三等奖学金（2016-2017）、优秀毕业生（2017） 
 
-### 浙江大学城市学院
-2017/09 - 2019/06
-- 电子信息工程 本科 信息与电气工程学院
-- GPA：3.91 / 5.00（专业前15%）
-- 相关课程：工程数学(83)， 软件基础(86)， 数据库原理及上机(82)， C++程序设计及上机(87)， Python程序设计与应用(95)， JAVA程序设计及上机(94)
 
 `
 
@@ -229,7 +217,7 @@ let code_better_resume = `
 }
 #project .demo{
   position: relative;
-  margin: 10px 0 55px 0;
+  margin: 10px 0 50px 0;
 }
 #project .demo ul{
   width: 65%;
@@ -286,6 +274,8 @@ writeCode(code_ready, '').then(()=>{
           addAvatar()
           $('#speed_btn').hide()
           $('#skip_btn').hide()
+          $('#code_body').removeClass('breathe')
+          $('#paper').addClass('breathe')
         })
     })
   })
@@ -378,9 +368,6 @@ function structuredResume(){
   $('#paper').prepend('<div id="information"></div>', '<div id="skills"></div>', '<div id="jobs"></div>', '<div id="project"></div>', '<div id="education"></div>')
   $('#information').append($('h1'), $('p').first())
   $('#skills').append($('h2:contains("专业技能")'), $('ul').first())
-  $('#education').append($('h2:contains("教育经历")'))
-  $('<div class="school"></div>').append($('h3:contains("衢州学院")') ,$('#paper > p').eq(-2), $('#paper > ul').eq(-2)).appendTo($('#education'))
-  $('<div class="school"></div>').append($('h3:contains("浙江大学城市学院")'), $('#paper > p').last(), $('#paper > ul').last()).appendTo($('#education'))
   $('#jobs').append($('h2:contains("工作经历")'))
   $('h3:contains("公司")').each((index,element) => {
     $('<div class="experience"></div>').append($(element), $('#paper > p').first(), $('#paper > ul').first()).appendTo($('#jobs'))

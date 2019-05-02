@@ -14,6 +14,9 @@
   white-space: unset;
   background: #ffffff;
 }
+#paper.breathe {
+  margin: 0px;
+}
 #paper a {
   color: #455A64;
 }
@@ -78,8 +81,6 @@
 #information {
   overflow: hidden;
 }
-
-
 
 code{
   background: #455a6426;
