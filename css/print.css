@@ -15,7 +15,12 @@
   background: #ffffff;
 }
 #paper.breathe {
+  width: 100%;
   margin: 0px;
+  padding: 0 45px;
+  font-size: 14px;
+  white-space: unset;
+  background: #ffffff;
 }
 #paper a {
   color: #455A64;
