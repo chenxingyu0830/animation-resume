@@ -1,8 +1,8 @@
 let resume = `# 陈星宇
 188-6808-5296 | chenxingyu0830@gmail.com | 杭州
 GitHub: https://github.com/chenxingyu0830
-毕业院校: 浙江大学城市学院 | 学历：本科
-个人博客: https://smallyu.top/ 
+Website: https://smallyu.top/resume/
+Blog: https://smallyu.top/ 
 19届毕业生 | 前端工程师 
 
 
@@ -26,10 +26,10 @@ GitHub: https://github.com/chenxingyu0830
 
 ## 工作经历
 ### 浙江浙大网新图灵信息科技有限公司
-2018/12 - 2019/01
+2018/10 - 2019/02
 - 职位：前端实习生
-- 主要技术：\`CSS\`、\`jQuery\`、\`Bootstrap\`、\`JSONP\`
-- 工作内容：主要负责网站内部后台框架的维护工作，并且通过jQuery和Bootstrap来实现添加新功能模块的添加修改和模块样式的修改。在这两个月的实习期间，收获了对jQuery的了解与使用，了解如何通过jQuery.ajax()调取后端数据。同时也实现了后台模块的几个小功能。
+- 主要技术：\`HTML\`、\`CSS\`、\`jQuery\`、\`Bootstrap\`、\`JSONP\`
+- 工作内容：主要负责公司内部后台网站的维护工作，并且通过jQuery和Bootstrap来实现添加新功能模块的添加修改和模块样式的修改。在这几个月的实习期间，收获了对jQuery的了解与使用。同时也实现了后台模块的几个小功能。
 
 ## 项目经验
 ### “Let's share”多人共享博客平台
@@ -60,12 +60,20 @@ GitHub: https://github.com/chenxingyu0830
 - 预览链接：https://smallyu.top/make-a-pikachu/
 - 描述：这个项目是通过\`原生JS\`实现的，以动画的效果展示如果从无到有通过\`CSS实现\`皮卡丘的卡通形象。另外还添加了变速/结束动画功能。
 
-### 色彩涂鸦
-![色彩涂鸦](./images/canvas-project.jpg)
-- 关键词： \`HTML 5\`、\`Canvas\`、\`ES6\`、\`JavaScript\`
-- 源码链接：https://github.com/chenxingyu0830/canvas-dome
-- 预览链接：https://smallyu.top/canvas-dome/
-- 描述：使用 HTML 5 的 Canvas 元素及其API，其中功能有 \`可选色/粗细、橡皮擦、一键清空、保存至本地\`等。
+
+## 教育经历
+### 衢州学院
+2014/09 - 2017/06
+- 计算机应用技术 大专 电气与信息工程学院
+- GPA：3.4 / 4.0（专业前10%）
+- 荣誉/奖项：优秀团员（2015-2016）、“互联网+”大学生创新创业大赛金奖（2016）
+- 二等奖学金（2015-2016）、三等奖学金（2016-2017）、优秀毕业生（2017）
+
+### 浙江大学城市学院
+2017/09 - 2019/06
+- 电子信息工程 本科 信息与电气工程学院
+- GPA：3.91 / 5.00（专业前15%）
+- 相关课程：工程数学(83)， 软件基础(86)， 数据库原理及上机(82)， C++程序设计及上机(87)， Python程序设计与应用(95)， JAVA程序设计及上机(94)
 
 
 
@@ -365,9 +373,12 @@ function addAvatar(){
 
 function structuredResume(){
   $('#paper')[0].innerHTML = marked(resume)
-  $('#paper').prepend('<div id="information"></div>', '<div id="skills"></div>', '<div id="jobs"></div>', '<div id="project"></div>', '<div id="education"></div>')
+   $('#paper').prepend('<div id="information"></div>', '<div id="skills"></div>', '<div id="jobs"></div>', '<div id="project"></div>', '<div id="education"></div>')
   $('#information').append($('h1'), $('p').first())
   $('#skills').append($('h2:contains("专业技能")'), $('ul').first())
+  $('#education').append($('h2:contains("教育经历")'))
+  $('<div class="school"></div>').append($('h3:contains("衢州学院")') ,$('#paper > p').eq(-2), $('#paper > ul').eq(-2)).appendTo($('#education'))
+  $('<div class="school"></div>').append($('h3:contains("浙江大学城市学院")'), $('#paper > p').last(), $('#paper > ul').last()).appendTo($('#education'))
   $('#jobs').append($('h2:contains("工作经历")'))
   $('h3:contains("公司")').each((index,element) => {
     $('<div class="experience"></div>').append($(element), $('#paper > p').first(), $('#paper > ul').first()).appendTo($('#jobs'))
