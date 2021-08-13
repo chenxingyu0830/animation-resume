@@ -58,10 +58,10 @@ Blog: https://smallyu.top/
 
 ## 项目经验
 ### “S1mple react” React-UI库
-![“S1mple react” React-UI库](./images/blog-project.jpg)
+![“S1mple react” React-UI库](./images/make-whells.jpg)
 - 关键词： \`UI 组件库\`、\`React Hooks\`、\`React Router\`、\`TypeScript\`、\`npm\`、\`Webpack\`、\`Jest\`、\`CircleCi\`
-- 源码链接：https://github.com/chenxingyu0830/vue-blog-client
-- 预览链接：https://smallyu.top/vue-blog-client/dist/.
+- 源码链接：https://github.com/chenxingyu0830/s1mple-react
+- 预览链接：https://smallyu.top/s1mple-react
 - 描述：个人独立开发的 React UI 组件库，使用 React Hooks + TypeScript 开发，并已发布到 npm 中。由此掌握了 webpack 打包、 npm 发布流程、 CircleCi 自动化持续集成等。
 
 ### “share blod”多人共享博客平台
