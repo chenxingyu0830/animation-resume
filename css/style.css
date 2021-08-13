@@ -1,135 +1,135 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-.wrapper{
-  min-width: 1100px;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
+.wrapper {
+	min-width: 1100px;
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
 }
-#paper > pre{
-  padding-left: 16px;
+#paper > pre {
+	padding-left: 16px;
 }
-#paper > .content{
-  overflow: auto;
+#paper > .content {
+	overflow: auto;
 }
 img.avatar {
-  width: 0;
+	width: 0;
 }
 
 #options {
-  width: 100%;
-  margin: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;  
-  position: relative;
+	width: 100%;
+	margin: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
 }
 #options #code_body {
-  height: 100%;
+	height: 100%;
 }
 
 /* speed_btn */
 #options #speed_btn {
-  position: absolute;
-  right: 25px;
-  top: 10px;
-  transition: all 0.2s;
-  user-select: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  max-width: 110px;
+	position: absolute;
+	right: 25px;
+	top: 10px;
+	transition: all 0.2s;
+	user-select: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	max-width: 110px;
 }
 #options #speed_status {
-  transition: all 0.2s;
-  font-size: 24px;
-  margin-left: 10px;
+	transition: all 0.2s;
+	font-size: 24px;
+	margin-left: 10px;
 }
 #options #speed_description {
-  opacity: 0;
-  font-size: 14px;
-  transition: all 0.3s;
+	opacity: 0;
+	font-size: 14px;
+	transition: all 0.3s;
 }
 #options #speed_btn:hover #speed_status {
-  transform: scale(1.2);
+	transform: scale(1.2);
 }
 #options #speed_btn:hover #speed_description {
-  opacity: 1;
+	opacity: 1;
 }
 
 /* skip_btn */
 #options #skip_btn {
-  position: absolute;
-  right: 25px;
-  top: 65px;
-  transition: all 0.2s;
-  user-select: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+	position: absolute;
+	right: 25px;
+	top: 65px;
+	transition: all 0.2s;
+	user-select: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
 }
 #options #skip_btn #skip_description {
-  display: none;
-  font-size: 14px;
-  transition: all 0.3s;
-  opacity: 0;
+	font-size: 14px;
+	transition: all 0.3s;
 }
-#options #skip_btn > #skip{
-  width: 40px;
-  display: none;
+#options #skip_btn > #skip {
+	width: 40px;
+	display: none;
 }
 #options #skip_btn:hover #skip {
-  transform: scale(1.2);
+	transform: scale(1.2);
 }
 #options #skip_btn:hover #skip_description {
-  opacity: 1;
+	opacity: 1;
 }
 
-
-a.downloadResume{
-  font-size: 20px;
-  text-align: center;
-  color: #beccd6;
-  display: none;
-  line-height: 16px;
-  padding: 21px 80px 21px 85px;
-  margin-top: 15px;
-  border: 1px solid rgb(203, 205, 207);
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: all 0.5s, 20ms;
-
+a.downloadResume {
+	font-size: 20px;
+	text-align: center;
+	color: #beccd6;
+	display: none;
+	line-height: 16px;
+	padding: 21px 80px 21px 85px;
+	margin-top: 15px;
+	border: 1px solid rgb(203, 205, 207);
+	font-weight: bold;
+	border-radius: 10px;
+	text-decoration: none;
+	transition: all 0.5s, 20ms;
 }
 .downloadResume:hover {
-  box-shadow: 4px 4px 10px 0px #beccd6;
-  transition: all 0.3s;
+	box-shadow: 4px 4px 10px 0px #beccd6;
+	transition: all 0.3s;
 }
 
-code{
-  background: #455a6426;
-  padding: 3px 7px;
-  border-radius: 3px;
-  font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
-  font-size: 12px;
-  margin-right: 5px;
-  color: #363636;
+code {
+	background: #455a6426;
+	padding: 3px 7px;
+	border-radius: 3px;
+	font-family: arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+	font-size: 12px;
+	margin-right: 5px;
+	color: #363636;
 }
 
-.token.comment, 
-.token.punctuation, 
-.token.property, 
+.token.comment,
+.token.punctuation,
+.token.property,
 .token.selector {
-  color: black;
+	color: black;
 }
 
-
-@keyframes breathe
-{
-  0% { box-shadow: 0 0 1px 0px #beccd6; }
-  50% { box-shadow: 0 0 10px 4px #beccd6; }
-  100% { box-shadow: 0 0 1px 0px #beccd6; }
+@keyframes breathe {
+	0% {
+		box-shadow: 0 0 1px 0px #beccd6;
+	}
+	50% {
+		box-shadow: 0 0 10px 4px #beccd6;
+	}
+	100% {
+		box-shadow: 0 0 1px 0px #beccd6;
+	}
 }
