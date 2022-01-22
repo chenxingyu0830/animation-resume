@@ -64,6 +64,9 @@
   margin-bottom: 6px;
   position: relative;
 }
+#project li, .experience li {
+    margin-bottom: 10px;
+}
 #jobs p, #education p {
   position: absolute;
   right: 0px;
