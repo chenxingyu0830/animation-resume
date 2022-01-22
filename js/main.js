@@ -1,7 +1,7 @@
 let resume = `# 陈星宇
 188-6808-5296 | chenxingyu0830@gmail.com | 杭州
 GitHub: https://github.com/chenxingyu0830
-Blog: https://smallyu.top/ 
+Blog: https://smallyu.cc/ 
 2年前端开发经验 | 本科
 
 
@@ -61,21 +61,21 @@ Blog: https://smallyu.top/
 ![“S1mple react” React-UI库](./images/make-whells.jpg)
 - 关键词： \`UI 组件库\`、\`React Hooks\`、\`React Router\`、\`TypeScript\`、\`npm\`、\`Webpack\`、\`Jest\`、\`CircleCi\`
 - 源码链接：https://github.com/chenxingyu0830/s1mple-react
-- 预览链接：https://smallyu.top/s1mple-react
+- 预览链接：https://smallyu.cc/s1mple-react
 - 描述：个人独立开发的 React UI 组件库，使用 React Hooks + TypeScript 开发，并已发布到 npm 中。由此掌握了 webpack 打包、 npm 发布流程、 CircleCi 自动化持续集成等。
 
 ### “share blod”多人共享博客平台
 ![“share blod”多人共享博客平台](./images/blog-project.jpg)
 - 关键词： \`Vue.js\`、\`Vue-cli\`、\`Vue Router\`、\`Vuex\`、\`Grid布局\`、\`媒体查询\`、\`Scss\`、\`ES6\`、\`Axios\`、\`Webpack\`
 - 源码链接：https://github.com/chenxingyu0830/vue-blog-client
-- 预览链接：https://smallyu.top/vue-blog-client/dist/.
+- 预览链接：https://smallyu.cc/vue-blog-client/dist/.
 - 描述：这个项目是基于Vue全家桶实现的多人共享博客平台。功能有用户登录/注册，博客的创建/编辑/删除等功能。\`通过Vue Router实现路由的跳转、异步加载、权限验证等，通过vuex实现状态管理，用Axios获取数据\`，并对接口进行了封装。
 
 ### 在线简历生成器
 ![在线简历生成器](./images/resume-project.jpg)
 - 关键词： \`jQuery\`、\`CSS3\`、\`Flex布局\`、\`变速\`、\`跳过动画\`、\`Promise\`
 - 源码链接：https://github.com/chenxingyu0830/animation-resume
-- 预览链接：https://smallyu.top/animation-resume/
+- 预览链接：https://smallyu.cc/animation-resume/
 - 描述：这个项目动态的展示了一个 Markdown 简历的制作过程，通过Flex布局实现页面布局，jQuery实现简历模块化。另外还添加了 \`变速/跳过动画\` 功能。
 
 
