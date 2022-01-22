@@ -66,7 +66,7 @@ Blog: https://smallyu.cc/
 - 关键词：\`React Hooks\`、\`React Router\`、\`TypeScript\`、\`SWR\`、\`Vite\`、\`Tailwind\`、\`ECharts\`、\`Grid\`
 - 源码链接：https://github.com/chenxingyu0830/big-screen-website
 - 预览链接：https://smallyu.cc/big-screen-website/dist/.
-- 描述：这个项目采用 hooks + vite 的形式，结合时下流行的SWR作为请求状态管理库，尝试用原子化css写法引入TailwindCSS。考虑到页面复杂度不高，没有引入全局的状态管理库，用hooks维护状态。并使用丁香园的开放数据 https://lab.isaaclin.cn/nCoV/，TypeScript规定接口规范。
+- 描述：这个项目采用 hooks + vite 的形式，结合时下流行的SWR作为请求状态管理库，尝试用原子化css写法引入TailwindCSS。考虑到页面复杂度不高，没有引入全局的状态管理库，用hooks维护状态。并使用丁香园的开放数据 https://lab.isaaclin.cn/nCoV/ ， TypeScript规定接口规范。
 
 ### “share blod”多人共享博客平台
 ![“share blod”多人共享博客平台](./images/blog-project.jpg)
