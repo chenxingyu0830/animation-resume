@@ -28,7 +28,7 @@ Blog: https://smallyu.cc/
 - Git
   - 熟悉 git flow 工作流模式，具有代码仓库协同⼯作的能⼒，Github / Gitlab 使用经验。
 - 其他
-  - 了解Node.js（使用过 Express/Koa, 做过 hollo world demo），能简单实现路由功能。
+  - 了解Node.js（使用过 Express/Koa, 做过 hello world demo），能简单实现路由功能。
   - 具有通过Google解决问题的能力，有自己的技术博客。
 
 ## 工作经历
