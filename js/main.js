@@ -19,7 +19,7 @@ Blog: https://smallyu.cc/
   - 熟练使用 Ant Design / Ant Design Mobile UI库，有 Sass / Less 开发经验
   - 掌握 Flex / Grid 等布局方式，可以合理使用语义化H5标签及 善于使用 BEM 命名规范 或 驼峰法。
   - 会使用 REM、vw/vh、FastClick 等技术制作适配手机设备的页面。
-  - 能狗独立制作美观网页，掌握 CSS3 动画、过渡效果、响应式等常用技术。
+  - 能够独立制作美观网页，掌握 CSS3 动画、过渡效果、响应式等常用技术。
 - 可视化
   - 了解并使用ECharts，AntV G2/BizCharts 等相关可视化库。
 - CI/CD & 单元测试
