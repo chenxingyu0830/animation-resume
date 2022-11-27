@@ -1,16 +1,14 @@
 let resume = `# 陈星宇
 188-6808-5296 | chenxingyu0830@gmail.com | 杭州
 GitHub: https://github.com/chenxingyu0830
-Blog: https://smallyu.cc/ 
-2年前端开发经验 | 本科
+Blog: <a href="https://fn97p1bxjw.feishu.cn/drive/folder/fldcnK3p3NEj9Ett5U88ZVSoVqh">个人飞书文档</a>
+3年前端开发经验 | 本科
 
 
 ## 专业技能
 - React
   - 掌握 React 及有相关库的开发经验，理解生命周期、组件通信、React Hooks、虚拟Dom 等相关概念。
-  - 了解并使用 Redux、Mobx、DvaJS、SWR 等状态管理库，React Router 路由库。
-- Vue
-  - 有 Vue 个人开发项目经验，掌握组件及组件间数据传递的使⽤、响应式原理、路由等。
+  - 了解并使用 Redux、Mobx 等状态管理库，React Router 路由库。
 - TypeScript
   - 有 TypeScript 工作开发经验，有一定自己理解。理解 接⼝、常⽤类型、枚举、泛型 等相关知识。
 - Webpack
@@ -28,14 +26,27 @@ Blog: https://smallyu.cc/
 - Git
   - 熟悉 git flow 工作流模式，具有代码仓库协同⼯作的能⼒，Github / Gitlab 使用经验。
 - 其他
-  - 了解Node.js（使用过 Express/Koa, 做过 hello world demo），能简单实现路由功能。
-  - 具有通过Google解决问题的能力，有自己的技术博客。
+  - 保持个人阶段性总结与复盘工作，乐于分享心得与向团队寻求工作上帮助。
+  - 做事认真，善于拆分复杂任务需求，积极沟通协调，具有通过Google解决问题的能力。
 
 ## 工作经历
+### 杭州獴哥健康科技有限公司
+2022/02 - 2022/11
+- 职位：高级前端工程师
+1. **"天津一中心医院互联网服务" 微信公众号**（2022/06 - 2020/11）
+  - 协同开发基于 \`React\`技术栈的 \`互联网医院\`C端项目，涵盖患者就医看病沟通全流程。
+  - 个人主要负责 就诊人管理、医生排班、挂号门诊缴费、问诊咨询、自费医保支付 等模块的开发工作。
+  - 项目难点在于 移动端路由回退问题，例如 A页面 -> B页面 -> C页面 -> B页面，此时点击浏览器回退按钮，我们希望效果应该回退到 A页面，而不是 C页面。
+2. **"獴哥健康"微信公众号 - 体检预约业务**（2022/02 - 2022/06）
+  - 协同开发基于 \`React\`技术栈的 \`体检套餐售卖\`C端电商平台，并负责对应B端后台管理系统开发建设。
+  - 两端均采用\`React + React Router + Umi + Ant Design / mobile \`解决方案。
+  - 项目难点在于 例如"体检套餐加项"功能需求，因为套餐内单个项目之间存在"互斥"、"依赖"、"被依赖"、"合并"、"父子"、"同组"复杂项目关系，需要梳理代码逻辑使用策略模式处理。
+  - 在项目开发过程中，个人经过团队沟通引入ahooks库，增强代码维护性与可读性。
+
 ### 杭州连帆科技有限公司
-2019/06 - 至今
+2019/06 - 2022/02
 - 职位：前端工程师
-1. **"智护+移动护理" PC/PDA**（2020/09 - 至今）
+1. **"智护+移动护理" PC/PDA**（2020/09 - 2022/02）
   - 协同开发基于 \`React\`技术栈的 \`移动护理解决方案\`平台，采用\`前后端分离\`架构。
   - 两端均采用\`React + React Router + Redux + Ant Design / mobile \`解决方案，网络请求二次封装fetch。
   - PC端难点在于 例如"体征批量录入"界面，医院护士希望能有 word文档 的使用体验，所以需要对 Antd 的 Table组件进行二次封装，包括支持类似回车键自动切换到下一体征项的功能需求。
@@ -59,7 +70,7 @@ Blog: https://smallyu.cc/
 - 关键词： \`UI 组件库\`、\`React Hooks\`、\`React Router\`、\`TypeScript\`、\`npm\`、\`Webpack\`、\`Jest\`、\`CircleCi\`
 - 源码链接：https://github.com/chenxingyu0830/s1mple-react
 - 预览链接：https://smallyu.cc/s1mple-react
-- 描述：个人独立开发的 React UI 组件库，使用 React Hooks + TypeScript 开发，并已发布到 npm 中。包括但不限于 webpack 打包、 npm 发布流程、Jest 进行单元测试、 CircleCi 自动化持续集成等环节。
+- 描述：个人独立开发的 React UI 组件库，使用 React Hooks + TypeScript 开发，并已发布到 npm 中。包括但不限于 webpack 打包、 npm 发布流程、Jest 进行单元测试、 CircleCi 自动化持续集成。
 
 ### “疫情实况” 可视化大屏
 ![“疫情实况” 可视化大屏](./images/big-screen-website.jpg)
@@ -210,7 +221,7 @@ let code_better_resume = `
   position: relative;
 }
 #jobs .experience > p, #education .school > p{
-  top: 9px;
+  top: 12px;
   right: 0;
   position: absolute;
 }
@@ -232,15 +243,19 @@ let code_better_resume = `
   line-height: 1.5;
 }
 
+.experience {
+  margin-bottom: 16px;
+}
+
 #paper ul {
-  margin: 4px 0;
+  margin: 2px 0;
 }
 #paper li{
   margin-bottom: 4px;
 }
 #project .demo{
   position: relative;
-  margin: 10px 0 80px 0;
+  margin: 10px 0 10px 0;
 }
 #project .demo ul{
   width: 65%;

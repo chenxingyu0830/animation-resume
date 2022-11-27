@@ -60,6 +60,9 @@
 #skills li, #works li, #education li {
   margin-bottom: 4px;
 }
+#jobs > .experience {
+  margin-bottom: 160px;
+}
 #jobs > .experience, #education {
   margin-bottom: 6px;
   position: relative;
@@ -69,6 +72,7 @@
 }
 #jobs p, #education p {
   position: absolute;
+  top: 12px;
   right: 0px;
 }
 #jobs p {
