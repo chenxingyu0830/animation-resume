@@ -64,7 +64,7 @@ Blog: <a href="https://fn97p1bxjw.feishu.cn/drive/folder/fldcnK3p3NEj9Ett5U88ZVS
   - 负责排班模块，人员管理，考试培训 等模块的开发工作。
   - 项目难点在于 服务几百家医院，项目体量较大。许多功能模块开发时需要考虑多种场景，需要不断沟通及需求变更。并且属于2014年的项目，当时采用\`ExtJS\`的项目开发，导致后续页面重构工作难度较大，同时还要自学 ExtJS 及 善于总结和网上查找相关知识点。
 
-## 项目经验
+## 个人项目
 ### “S1mple react” React-UI库
 ![“S1mple react” React-UI库](./images/make-whells.jpg)
 - 关键词： \`UI 组件库\`、\`React Hooks\`、\`React Router\`、\`TypeScript\`、\`npm\`、\`Webpack\`、\`Jest\`、\`CircleCi\`
