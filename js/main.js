@@ -12,22 +12,21 @@ Blog: <a href="https://fn97p1bxjw.feishu.cn/drive/folder/fldcnK3p3NEj9Ett5U88ZVS
 - TypeScript
   - 有 TypeScript 工作开发经验，有一定自己理解。理解 接⼝、常⽤类型、枚举、泛型 等相关知识。
 - Webpack
-  - 掌握使用 Webpack 打包项目的经验，了解其管理资源的方法，如 css-loader 、 babel-loader 等。
+  - 掌握使用 Webpack 打包项目的经验，熟悉常用模块与相关配置，如 babel-loader 、 webpack-bundle-analyse 等。
 - PC / 移动端 页面
   - 熟练使用 Ant Design / Ant Design Mobile UI库，有 Sass / Less 开发经验
   - 掌握 Flex / Grid 等布局方式，可以合理使用语义化H5标签及 善于使用 BEM 命名规范 或 驼峰法。
   - 会使用 REM、vw/vh、FastClick 等技术制作适配手机设备的页面。
-  - 能够独立制作美观网页，掌握 CSS3 动画、过渡效果、响应式等常用技术。
 - 可视化
-  - 了解并使用ECharts，AntV G2/BizCharts 等相关可视化库。
-- CI/CD & 单元测试
+  - 了解并熟练使用ECharts，AntV G2/BizCharts 等相关可视化库，个人作品与公司项目都有对应实践。
+- 工具类
   - 了解 CI/CD 流程及内容，了解常用 CI 工具如 Jenkins，CircleCI。
   - 了解单元测试内容，个人项目使用过 Jest 库，能通过 CI 工具 test 项目相关代码，保证代码可维护性。
-- Git
   - 熟悉 git flow 工作流模式，具有代码仓库协同⼯作的能⼒，Github / Gitlab 使用经验。
 - 其他
   - 保持个人阶段性总结与复盘工作，乐于分享心得与向团队寻求工作上帮助。
   - 做事认真，善于拆分复杂任务需求，积极沟通协调，具有通过Google解决问题的能力。
+  - 热爱开源，维护并分享技术博客与开源作品。
 
 ## 工作经历
 ### 杭州獴哥健康科技有限公司
@@ -62,7 +61,7 @@ Blog: <a href="https://fn97p1bxjw.feishu.cn/drive/folder/fldcnK3p3NEj9Ett5U88ZVS
   - 因为系统页面及功能打包体积较小，经过公司内部讨论采用 \`Webpack 多页面打包\`的实践方式，保证两个路由下的单页面开发，方便代码维护。
   - 历时一年多时间，系统成功上线十几家医院，获得医院口碑及医生护士满意度。
 
-## 个人项目
+## 个人作品
 ### “S1mple react” React-UI库
 ![“S1mple react” React-UI库](./images/make-whells.jpg)
 - 关键词： \`UI 组件库\`、\`React Hooks\`、\`React Router\`、\`TypeScript\`、\`npm\`、\`Webpack\`、\`Jest\`、\`CircleCi\`
