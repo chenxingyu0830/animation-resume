@@ -8,7 +8,7 @@
 }
 #paper {
   width: 100%;
-  margin: 0px;
+  margin: 0;
   padding: 0 45px;
   font-size: 14px;
   white-space: unset;
@@ -16,7 +16,7 @@
 }
 #paper.breathe {
   width: 100%;
-  margin: 0px;
+  margin: 0;
   padding: 0 45px;
   font-size: 14px;
   white-space: unset;
@@ -40,7 +40,7 @@
   margin: 0;
 }
 #information p {
-  line-height: 24px;
+  line-height: 20px;
   white-space: pre-wrap;
 }
 #paper h2 {
@@ -54,32 +54,21 @@
   font-size: 14px;
   margin: 6px 0;
 }
+
 #skills > ul ul {
   margin: 6px 0;
 }
 #skills li, #works li, #education li {
-  margin-bottom: 4px;
+  margin-bottom: 24px;
+  line-height: 26px;
 }
 #jobs > .experience {
-  margin-bottom: 160px;
-}
-#jobs > .experience, #education {
-  margin-bottom: 6px;
+  margin-bottom: 16px;
   position: relative;
 }
-#project li, .experience li {
-    margin-bottom: 10px;
-}
-#jobs p, #education p {
-  position: absolute;
-  top: 12px;
-  right: 0px;
-}
 #jobs p {
-  top: 6px;
-}
-#education p { 
-  top: 40px;
+  position: static;
+  margin-top: 6px;
 }
 #information {
   position: relative;
