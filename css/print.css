@@ -56,14 +56,14 @@
 }
 
 #skills > ul ul {
-  margin: 6px 0;
+  margin: 8px 0;
 }
 #skills li, #works li, #education li {
   margin-bottom: 24px;
   line-height: 26px;
 }
 #jobs > .experience {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   position: relative;
 }
 #jobs p {
