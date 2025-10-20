@@ -58,12 +58,12 @@ Blog: <a href="https://fn97p1bxjw.feishu.cn/drive/folder/fldcnK3p3NEj9Ett5U88ZVS
 
 ### “S1mple react” React-UI库
 - 源码链接：https://github.com/chenxingyu0830/s1mple-react
-- 预览链接：https://smallyu.cc/s1mple-react
+- 预览链接：https://chenxingyu0830.github.io/s1mple-react
 - 描述：个人独立开发的 React UI 组件库，使用 React Hooks + TypeScript 开发，并已发布到 npm 中。包括但不限于 webpack 打包、 npm 发布流程、 CircleCi 自动化持续集成。
 
 ### “疫情实况” 可视化大屏
 - 源码链接：https://github.com/chenxingyu0830/big-screen-website
-- 预览链接：https://smallyu.cc/big-screen-website/dist/.
+- 预览链接：https://chenxingyu0830.github.io/big-screen-website/dist/#
 - 描述：该项目直观展示疫情数据，通过 React Hooks 管理状态，结合 SWR 实现高效数据请求与缓存。使用 Vite 提高构建速度，配合 Tailwind CSS 实现模块化样式管理。项目通过丁香园开放 API（https://lab.isaaclin.cn/nCoV/）和 百度地图 API 精准定位疫情数据。
 
 
